@@ -1,9 +1,9 @@
 /**
- * Name:
- * Period: 
- * Project:
- * Date last updated: 
- * Project Description:
+ * Name: Rui Meng
+ * Period: 1
+ * Project: Big Matrix
+ * Date last updated: 3/12
+ * Project Description: Make 2 x 2 billion hash table with reasonable memory
  */
 
 import java.util.List;
