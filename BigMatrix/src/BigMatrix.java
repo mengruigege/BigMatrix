@@ -6,6 +6,7 @@
  * Project Description: Make 2 x 2 billion hash table with reasonable memory
  */
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class BigMatrix
             }
         }
 	}
-	
+
 	public int getValue(int row, int col)
 	{
 		throw new UnsupportedOperationException();		
@@ -48,7 +49,17 @@ public class BigMatrix
 	
 	public List<Integer> getNonEmptyRows()
 	{
-		throw new UnsupportedOperationException();
+	    // Initialize a list to store the indices of non-empty rows
+	    List<Integer> nonEmptyRows = new ArrayList<>();
+
+	    // Iterate through the keys of the matrix map, which are the row indices
+	    for (Integer row : matrix.keySet()) {
+	        // Add each row index to the list
+	        nonEmptyRows.add(row);
+	    }
+
+	    // Return the list of non-empty row indices
+	    return nonEmptyRows;
 	}
 	
 	public List<Integer> getNonEmptyRowsInColumn(int col)
