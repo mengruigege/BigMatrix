@@ -8,6 +8,7 @@
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 public class BigMatrix 
@@ -69,7 +70,23 @@ public class BigMatrix
 	
 	public List<Integer> getNonEmptyCols()
 	{
-		throw new UnsupportedOperationException();
+		// A set to store unique column indices that contain non-zero values
+	    HashSet<Integer> nonEmptyColsSet = new HashSet<>();
+
+	    // Iterate through all rows
+	    for (HashMap<Integer, Integer> rowMap : matrix.values()) {
+	        // Iterate through the keys of the rowMap, which are the column indices
+	        for (Integer col : rowMap.keySet()) {
+	            // Add the column index to the set
+	            nonEmptyColsSet.add(col);
+	        }
+	    }
+
+	    // Convert the set to a list to match the return type
+	    List<Integer> nonEmptyCols = new ArrayList<>(nonEmptyColsSet);
+
+	    // Return the list of non-empty column indices
+	    return nonEmptyCols;	
 	}
 	
 	public List<Integer> getNonEmptyColsInRow(int row)
