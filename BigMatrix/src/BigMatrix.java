@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 
 public class BigMatrix 
 {
@@ -65,9 +66,22 @@ public class BigMatrix
 	
 	public List<Integer> getNonEmptyRowsInColumn(int col)
 	{
-		throw new UnsupportedOperationException();
+		// Initialize a list to store the indices of rows that have a non-zero value in the specified column
+	    List<Integer> nonEmptyRowsInColumn = new ArrayList<>();
+
+	    // Iterate through the matrix to find rows that contain the specified column
+	    for (Map.Entry<Integer, HashMap<Integer, Integer>> entry : matrix.entrySet()) {
+	        // Check if the current row has a non-zero value in the specified column
+	        if (entry.getValue().containsKey(col)) {
+	            // If so, add the row index to our list
+	            nonEmptyRowsInColumn.add(entry.getKey());
+	        }
+	    }
+
+	    // Return the list of row indices that have a non-zero value in the specified column
+	    return nonEmptyRowsInColumn;	
 	}
-	
+
 	public List<Integer> getNonEmptyCols()
 	{
 		// A set to store unique column indices that contain non-zero values
