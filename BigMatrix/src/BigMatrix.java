@@ -2,7 +2,7 @@
  * Name: Rui Meng
  * Period: 1
  * Project: Big Matrix
- * Date last updated: 3/12
+ * Date last updated: 3/19
  * Project Description: Make 2 x 2 billion hash table with reasonable memory
  */
 
@@ -75,7 +75,8 @@ public class BigMatrix
 	
 	public List<Integer> getNonEmptyRowsInColumn(int col)
 	{
-		// Initialize a list to store the indices of rows that have a non-zero value in the specified column
+		/* Initialize a list to store the indices of rows that have a non-zero value in the
+		 specified column */
 	    List<Integer> nonEmptyRowsInColumn = new ArrayList<>();
 
 	    // Iterate through the matrix to find rows that contain the specified column
@@ -114,7 +115,8 @@ public class BigMatrix
 	
 	public List<Integer> getNonEmptyColsInRow(int row)
 	{
-		// Initialize a list to store the indices of columns with non-zero values in the specified row
+		/* Initialize a list to store the indices of columns with non-zero values in the
+		specified row */
 	    List<Integer> nonEmptyColsInRow = new ArrayList<>();
 	    
 	    // Check if the row exists in the matrix
